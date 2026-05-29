@@ -1,0 +1,23 @@
+﻿# 08 - Complete mini program
+
+gawa average(numbers) {
+    total = 0
+    para number sa numbers {
+        total = total + number
+    }
+    balikan total / len(numbers)
+}
+
+grades = [88, 92, 79, 95]
+avg = average(grades)
+
+print("grades =", grades)
+print("average =", avg)
+
+kung (avg >= 90) {
+    print("honor student")
+} o_else kung (avg >= 75) {
+    print("passed")
+} o_else {
+    print("failed")
+}

@@ -1,0 +1,16 @@
+﻿# 01 - Variables and data types
+
+age = 18
+height = 5.9
+name = "CodeX"
+is_learning = nocap
+missing_value = walang
+numbers = [1, 2, 3, 4]
+
+print("name =", name)
+print("age =", age)
+print("height =", height)
+print("is_learning =", is_learning)
+print("missing_value =", missing_value)
+print("numbers =", numbers)
+print("type(numbers) =", type(numbers))

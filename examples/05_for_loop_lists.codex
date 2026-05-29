@@ -1,0 +1,12 @@
+﻿# 05 - For loop and lists
+
+values = [3, 5, 7, 9]
+total = 0
+
+para value sa values {
+    total = total + value
+    print("added", value, "total", total)
+}
+
+print("final total =", total)
+print("length =", len(values))

@@ -1,0 +1,17 @@
+﻿# 03 - Conditionals using original SadBoy keywords
+
+score = 87
+passed = score >= 75
+
+kung (passed at score >= 90) {
+    print("excellent")
+} o_else kung (passed) {
+    print("passed")
+} o_else {
+    print("try again")
+}
+
+kung (hindi (score < 75)) {
+    print("not failing")
+}
+

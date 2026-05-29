@@ -1,0 +1,16 @@
+﻿# 06 - Functions and recursion
+
+gawa factorial(n) {
+    kung (n <= 1) {
+        balikan 1
+    } o_else {
+        balikan n * factorial(n - 1)
+    }
+}
+
+gawa add(a, b) {
+    balikan a + b
+}
+
+print("add(10, 15) =", add(10, 15))
+print("factorial(6) =", factorial(6))

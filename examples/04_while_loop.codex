@@ -1,0 +1,12 @@
+﻿# 04 - While loop
+
+count = 1
+factorial = 1
+
+habang (count <= 5) {
+    factorial = factorial * count
+    print("step", count, "factorial", factorial)
+    count = count + 1
+}
+
+print("5! =", factorial)

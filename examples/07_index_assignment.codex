@@ -1,0 +1,8 @@
+﻿# 07 - Indexed list assignment
+
+items = [10, 20, 30]
+print("before =", items)
+
+items[1] = 99
+print("after =", items)
+print("middle =", items[1])
