@@ -1,9 +1,3 @@
-r"""Multiline coding UI for Hinagpis / SadBoy CodeX.
-
-Run with:
-    python .\hinagpis_ui.py
-"""
-
 import contextlib
 import io
 import os
@@ -13,34 +7,11 @@ from tkinter import filedialog, messagebox, ttk
 from hinagpis import CodeXError, Interpreter, Lexer, compile_source
 
 
-DEFAULT_CODE = """# Hinagpis / SadBoy CodeX multiline editor
-
-gawa factorial(n) {
-    kung (n <= 1) {
-        balikan 1
-    } o_else {
-        balikan n * factorial(n - 1)
-    }
-}
-
-numbers = [1, 2, 3, 4, 5]
-sum = 0
-
-para item sa numbers {
-    sum = sum + item
-}
-
-print("sum =", sum)
-print("factorial(5) =", factorial(5))
-"""
-
-
 class HinagpisUI:
-    """Small Tkinter IDE for writing and running Hinagpis code."""
 
     def __init__(self, root):
         self.root = root
-        self.root.title("Hinagpis / SadBoy CodeX IDE")
+        self.root.title("Hinagpis Programming Language IDE")
         self.root.geometry("1050x720")
         self.current_file = None
 
@@ -49,7 +20,7 @@ class HinagpisUI:
         self._build_layout()
         self._bind_shortcuts()
 
-        self.editor.insert("1.0", DEFAULT_CODE)
+        self.editor.insert("1.0")
         self._update_status("Ready")
 
     def _configure_style(self):
@@ -204,7 +175,7 @@ class HinagpisUI:
 
     def new_file(self):
         self.editor.delete("1.0", tk.END)
-        self.editor.insert("1.0", DEFAULT_CODE)
+        self.editor.insert("1.0")
         self.current_file = None
         self.clear_output()
         self._refresh_line_numbers()

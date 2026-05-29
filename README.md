@@ -19,6 +19,8 @@ the complete front-end and execution pipeline of an interpreted language.
 - **`.\hinagpis.py`**: Canonical implementation based on your original SadBoy CodeX lexer and token names.
 - **`.\main.py`**: Command-line entry point.
 - **`.\hinagpis_ui.py`**: Multiline coding UI / mini IDE.
+- **`.\demo.py`**: Demo runner for sample code and example programs.
+- **`.\DEMO_SCRIPT.md`**: Written presentation script for demonstrating the project.
 - **`.\examples\`**: Multiple runnable SadBoy CodeX example programs.
 - **`.\test_lexer.py`**: Lexer demonstration suite.
 - **`.\LANGUAGE_DESIGN.md`**: Unified guide for syntax, grammar, lexer, parser, semantics, interpreter, optimizer, CLI usage, and SadBoy keywords.
@@ -67,6 +69,22 @@ Get-ChildItem .\examples\*.codex | ForEach-Object {
     Write-Host "`n--- $($_.Name) ---"
     python .\main.py $_.FullName
 }
+```
+
+## Run the Demo Script
+
+```bash
+# Run built-in demo source
+python .\demo.py
+
+# Include lexer token output
+python .\demo.py --tokens
+
+# Run all files in .\examples\
+python .\demo.py --all
+
+# Launch the coding UI from the demo script
+python .\demo.py --ui
 ```
 
 ## CLI Usage
